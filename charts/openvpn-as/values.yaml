@@ -33,6 +33,8 @@ openvpn:
 persistence:
   # -- Enable persistence using PVC
   enabled: true
+  # -- Use an existing PVC
+  existingClaim: # name one here
   # -- PVC Storage Class for volume
   storageClass:
   # -- Annotations for the PVC

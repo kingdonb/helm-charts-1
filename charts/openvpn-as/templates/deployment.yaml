@@ -90,7 +90,7 @@ spec:
             defaultMode: 0777
         - name: backup
           persistentVolumeClaim:
-            claimName: {{ include "openvpn-as.fullname" . }}-state
+            claimName: {{ .Values.persistence.existingClaim | default (include "openvpn-as.fullname" .) }}-state
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
