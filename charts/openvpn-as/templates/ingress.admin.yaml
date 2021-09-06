@@ -30,7 +30,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ $fullName }}-admin
+                name: {{ $fullName }}-lb
                 port:
                   number: {{ .Values.openvpn.ports.admin }}
   {{- end }}

@@ -78,6 +78,10 @@ securityContext:
 service:
   # -- Kubernetes Service type for VPN, generally this is "LoadBalancer"
   type: ClusterIP
+  # -- Kubernetes Service for Admin/Client GUI
+  lb:
+    type: LoadBalancer
+  # DEPRECATED -- separate load balancers for Admin and Client GUI
   admin:
     # -- Kubernetes Service type for Admin GUI
     type: ClusterIP

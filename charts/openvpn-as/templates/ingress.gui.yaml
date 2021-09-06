@@ -30,7 +30,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ $fullName }}-gui
+                name: {{ $fullName }}-lb
                 port:
                   number: {{ .Values.openvpn.ports.gui }}
   {{- end }}
