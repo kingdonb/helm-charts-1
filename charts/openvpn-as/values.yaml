@@ -76,9 +76,9 @@ securityContext:
     add: ["NET_ADMIN"]
 
 service:
-  # -- Kubernetes Service type for VPN, generally this is "LoadBalancer"
+  # DEPRECATED -- Kubernetes Service type for VPN, generally this is "LoadBalancer"
   type: ClusterIP
-  # -- Kubernetes Service for Admin/Client GUI
+  # -- Kubernetes Service for Admin/Client GUI / TCP / UDP LoadBalancer all-in-one
   lb:
     type: LoadBalancer
   # DEPRECATED -- separate load balancers for Admin and Client GUI

@@ -15,5 +15,13 @@ spec:
       targetPort: gui
       protocol: TCP
       name: gui
+    - port: {{ .Values.openvpn.ports.tcp }}
+      targetPort: vpn-tcp
+      protocol: TCP
+      name: vpn-tcp
+    - port: {{ .Values.openvpn.ports.udp }}
+      targetPort: vpn-udp
+      protocol: UDP
+      name: vpn-udp
   selector:
     {{- include "openvpn-as.selectorLabels" . | nindent 4 }}
