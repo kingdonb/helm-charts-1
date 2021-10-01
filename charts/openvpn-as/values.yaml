@@ -81,6 +81,7 @@ service:
   # -- Kubernetes Service for Admin/Client GUI / TCP / UDP LoadBalancer all-in-one
   lb:
     type: LoadBalancer
+    ipAddress: ''
   # DEPRECATED -- separate load balancers for Admin and Client GUI
   admin:
     # -- Kubernetes Service type for Admin GUI

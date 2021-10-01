@@ -6,6 +6,7 @@ metadata:
     {{- include "openvpn-as.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.lb.type }}
+  loadBalancerIP: {{ .Values.service.lb.ipAddress }}
   ports:
     - port: {{ .Values.openvpn.ports.admin }}
       targetPort: admin

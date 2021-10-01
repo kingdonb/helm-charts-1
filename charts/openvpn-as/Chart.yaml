@@ -2,7 +2,7 @@ apiVersion: v2
 name: openvpn-as
 description: A Helm chart for OpenVPN Access Server
 type: application
-version: 0.3.0-alpha.3
+version: 0.3.0-alpha.4
 appVersion: version-2.8.6-916f8e7d-ubuntu18
 maintainers:
   - email: kingdon@weave.works
